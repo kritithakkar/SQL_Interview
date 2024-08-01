@@ -1,0 +1,1 @@
+SELECT product_name, year, price from Sales join Product ON Sales.product_id = Product.product_id;
