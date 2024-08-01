@@ -1,1 +1,5 @@
 SELECT product_name, year, price from Sales join Product ON Sales.product_id = Product.product_id;
+OR
+select b.product_name, a.year, a.price 
+from sales as a, product as b
+where a.product_id = b.product_id;
