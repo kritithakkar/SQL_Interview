@@ -1,0 +1,11 @@
+WITH ranked AS (
+  SELECT *,
+         ROW_NUMBER() OVER (PARTITION BY Age ORDER BY id) AS rn
+  FROM Users
+)
+DELETE FROM Users
+WHERE id IN (
+  SELECT id
+  FROM ranked
+  WHERE rn > 1
+);
