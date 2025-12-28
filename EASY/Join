@@ -1,0 +1,3 @@
+SELECT users.firstName, users.lastName, users.age, cities.name as cityName FROM users
+INNER JOIN cities
+ON users.cityId = cities.id
