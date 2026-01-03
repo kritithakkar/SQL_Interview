@@ -1,0 +1,2 @@
+SELECT * FROM table_name
+WHERE MOD(ID_column, 2) = 0;
