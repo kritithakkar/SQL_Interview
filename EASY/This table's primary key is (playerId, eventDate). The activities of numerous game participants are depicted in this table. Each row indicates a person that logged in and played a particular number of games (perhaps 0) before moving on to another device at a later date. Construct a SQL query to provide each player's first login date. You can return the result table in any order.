@@ -1,0 +1,3 @@
+select distinct(playerId),
+FIRST_VALUE(eventDate) OVER(PARTITION BY playerId ORDER BY eventDate) as firstLogin
+from Activity;
