@@ -1,0 +1,2 @@
+SELECT OrderID, DATEDIFF(day, OrderDate, ShipDate) AS DaysDiff
+FROM Orders;
