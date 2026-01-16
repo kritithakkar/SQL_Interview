@@ -1,0 +1,4 @@
+SELECT Age, COUNT(Age)
+FROM Users
+GROUP BY Age
+HAVING COUNT(Age) > 1
