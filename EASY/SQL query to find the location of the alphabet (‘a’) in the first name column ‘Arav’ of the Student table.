@@ -1,0 +1,5 @@
+SELECT STUDENT_ID, FIRST_NAME, INSTR(FIRST_NAME, ‘a’) AS Position_of_a
+
+FROM Student
+
+WHERE FIRST_NAME = ‘Aarav’;
