@@ -1,0 +1,6 @@
+SELECT Month,
+       SUM(CASE WHEN ProductCategory = 'Electronics' THEN Sales ELSE 0 END) AS Electronics,
+       SUM(CASE WHEN ProductCategory = 'Clothing' THEN Sales ELSE 0 END) AS Clothing,
+       ... (add more categories)
+FROM SalesData
+GROUP BY Month;
