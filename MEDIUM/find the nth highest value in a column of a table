@@ -1,0 +1,6 @@
+SELECT column_name
+FROM (
+  SELECT column_name, DENSE_RANK() OVER (ORDER BY column_name DESC) AS rnk
+  FROM table_name
+) t
+WHERE rnk = :n;
